@@ -17,7 +17,7 @@ if ( ! $post ) return;
 
 $title = $post['subject'];
 $content = $post['content'];
-$content .= "<br> <p><a href='https://www.philg.com/?$post[idx]'>#필고</a>
+$content .= "<br> <p><a href='https://www.philgo.com/?$post[idx]'>#필고</a>
 	<a href='https://www.philgo.com/?$post[idx]'>#마닐라</a>
 	<a href='https://www.philgo.com/?$post[idx]'>#세부</a>
 	<a href='https://www.philgo.com/?$post[idx]'>#앙헬레스</a>
