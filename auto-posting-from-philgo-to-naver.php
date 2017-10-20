@@ -23,7 +23,7 @@ $content .= "<br> <p><a href='https://www.philgo.com/?$post[idx]'>#필고</a>
 	<a href='https://www.philgo.com/?$post[idx]'>#앙헬레스</a>
 	<a href='https://www.philgo.com/?$post[idx]'>#필리핀여행</a></p>";
 
-$copyright = "<p><a href='https://www.philg.com/'>필리핀 사이트 - 필고</a></p>";
+$copyright = "<div><a href='https://www.philgo.com/'>필리핀 사이트 - 필고</a></div>&nbsp;<br>";
 $content = "<div style='font-size: 14pt; line-height: 160%;'>$copyright$content</div>";
 
 
