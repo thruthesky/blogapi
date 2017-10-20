@@ -1,5 +1,5 @@
 <?php
-
+//
 $username = 'ionickorea';
 $password = 'cea8149e81eeaebb8c438af05288e53e';
 $endpoint = 'https://api.blog.naver.com/xmlrpc';
@@ -18,12 +18,13 @@ if ( ! $post ) return;
 $title = $post['subject'];
 $content = $post['content'];
 $content .= "<br> <p><a href='https://www.philg.com/?$post[idx]'>#필고</a>
-	<a href='https://www.philg.com/?$post[idx]'>#마닐라</a>
-	<a href='https://www.philg.com/?$post[idx]'>#세부</a>
-	<a href='https://www.philg.com/?$post[idx]'>#앙헬레스</a>
-	<a href='https://www.philg.com/?$post[idx]'>#필리핀여행</a></p>";
+	<a href='https://www.philgo.com/?$post[idx]'>#마닐라</a>
+	<a href='https://www.philgo.com/?$post[idx]'>#세부</a>
+	<a href='https://www.philgo.com/?$post[idx]'>#앙헬레스</a>
+	<a href='https://www.philgo.com/?$post[idx]'>#필리핀여행</a></p>";
 
-$content = "<div style='font-size: 14pt; line-height: 160%;'>$content</div>";
+$copyright = "<p><a href='https://www.philg.com/'>필리핀 사이트 - 필고</a></p>";
+$content = "<div style='font-size: 14pt; line-height: 160%;'>$copyright$content</div>";
 
 
 
