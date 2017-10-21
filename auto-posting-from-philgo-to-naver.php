@@ -40,11 +40,11 @@ $url = "http://www.philgo.com/?module=post&action=auto_posting_log&submit=1&idx=
 
 $re = get_json($url);
 if ( ! $re ) {
-	echo "ERROR saving log\n";
+//	echo "ERROR saving log\n";
 }
 else {
-	echo "SUCCESS: \n";
-	print_r( json_decode($re, true));
+//	echo "SUCCESS: \n";
+//	print_r( json_decode($re, true));
 }
 
 /**
