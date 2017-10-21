@@ -33,11 +33,29 @@ $request = new Request('metaWeblog.newPost',
 $response = $client->send( $request );
 
 if ( $response->faultCode() ) {
-	echo json_encode( ['code' => $response->faultCode(), 'message' => $response->faultString()]);
+//	echo json_encode( ['code' => $response->faultCode(), 'message' => $response->faultString()]);
+	$ret = "code: " . $response->faultCode() . ", message: " . $response->faultString();
 }
 else {
 //	echo json_encode( ['code' => 0 ] );
-	return 0;
+
+
+//	echo "Success\n";
+//	print_r($response->val); // Response 클래스의 바로 아래에 Value 클래스 객체가 들어가 있다.
+//	foreach ( $response->val as $valueArrays ) {
+//		foreach ( $valueArrays as $values ) {
+//			foreach ( $values as $value ) {
+//				print_r( $value . "\n" );
+//			}
+//		}
+//	}
+
+	$ret = $response->val->me['string'];
+
+
+
+//	return 0;
 }
 
 
+return $ret;
