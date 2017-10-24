@@ -1,8 +1,10 @@
 <?php
 //
+
+// Meta Weblog API 로 글을 쓴다
 /**
  *
- * $username, $password, $endpoint, $title, $content 에 정보가 들어오면 글을 포스팅 한다.
+ * $username, $password, $endpoint, $post[title], $post[content] 에 정보가 들어오면 글을 포스팅 한다.
  */
 
 require_once 'src/Autoloader.php';
@@ -22,8 +24,8 @@ $request = new Request('metaWeblog.newPost',
 		new Value( $password , "string"),
 		new Value( [
 //			"categories" => new Value([ new Value('필리핀 스토리', 'string')], 'struct'),
-			"description" => new Value($content, 'string'),
-			"title" => new Value($title, 'string'),
+			"description" => new Value($post['content'], 'string'),
+			"title" => new Value($post['title'], 'string'),
 			"dateCreated" => new Value($date)
 		], "struct"),
 		new Value( 1, 'boolean' )
