@@ -8,7 +8,6 @@ $endpoint = 'https://api.blog.naver.com/xmlrpc';
 
 
 $posting_id = 'naver-blog-ionickorea';
-$posting_id = 'naver-blog-ionickorea2';
 
 $post = philgo_get_a_post( $posting_id );
 if ( $post ) {
