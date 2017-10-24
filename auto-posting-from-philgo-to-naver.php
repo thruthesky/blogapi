@@ -17,13 +17,8 @@ if ( $post ) {
 		$result = 'SUCCESS';
 	}
 	else {
+		$url = '';
 		$result = "ERROR";
 	}
 	philgo_leave_log( $post, $result, 'naver', $url );
 }
-
-
-
-
-
-

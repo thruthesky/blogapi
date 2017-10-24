@@ -30,6 +30,7 @@ function philgo_leave_log( $post, $result, $site, $url ) {
 	$re = "$result||$url||" . date('Y-m-d H:i');
 	$url = "http://www.philgo.com/?module=post&action=auto_posting_log&submit=1&idx=$post[idx]&site=$site&re=$re";
 
+//	print_r("url: " . $url);
 	$re = get_json($url);
 	if ( ! $re ) {
 //	echo "ERROR saving log\n";
@@ -52,7 +53,7 @@ function philgo_leave_log( $post, $result, $site, $url ) {
  */
 function get_json( $url ) {
 	$body = file_get_contents($url);
-	print_r($body);
+//	print_r($body);
 	if ( empty($body) ) return null;
 	$arr = json_decode($body, true);
 	$error = json_last_error();
