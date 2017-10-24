@@ -57,7 +57,7 @@ else {
  */
 function get_json( $url ) {
 	$body = file_get_contents($url);
-	print_r($body);
+//	print_r($body);
 	if ( empty($body) ) return null;
 	$arr = json_decode($body, true);
 	$error = json_last_error();
